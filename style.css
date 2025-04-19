@@ -196,25 +196,33 @@ img {
 
 .carousel {
   position: relative;
-  width: 80%;
-  margin: auto;
+  width: 100%;
   overflow: hidden;
+  padding: 2rem 0;
 }
 
 .carousel__container {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
 .carousel__slide {
-  flex: 0 0 100%;
+  flex: 0 0 calc(100% / 3);
+  max-width: calc(100% / 3);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
   padding: 1rem;
-  min-height: 300px;
+  box-sizing: border-box;
+}
+
+.carousel__slide iframe {
+  max-width: 100%;
+  border: none;
+  margin: 0 auto;
 }
 
 .carousel__slide img {
@@ -222,12 +230,6 @@ img {
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
-}
-
-.carousel__slide iframe {
-  max-width: 100%;
-  border: none;
-  margin: 0 auto;
 }
 
 .carousel__slide p {
@@ -256,6 +258,13 @@ img {
 
 .carousel__next {
   right: 10px;
+}
+
+@media (max-width: 768px) {
+  .carousel__slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 /* Projects */

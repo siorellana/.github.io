@@ -81,12 +81,12 @@
   
       <div class="carousel__container">
         
-        <!-- Certification 1 -->
+        <!-- Certification 2 (CKA - EMBEDDED) -->
         <div class="carousel__slide">
-          <a href="https://www.credly.com/badges/4f1fbef7-d85f-442d-973d-6fb222b201b4/public_url" target="_blank">
-            <img src="https://images.credly.com/size/340x340/images/1a1c88de-6503-4a59-b942-9a6d94c7d5f0/github-admin.png" alt="GitHub Administration">
-            <p>GitHub Administration</p>
-          </a>
+          <div data-iframe-width="150" data-iframe-height="270"
+               data-share-badge-id="4f1fbef7-d85f-442d-973d-6fb222b201b4"
+               data-share-badge-host="https://www.credly.com"></div>
+          <p>CKA: Certified Kubernetes Administrator</p>
         </div>
   
         <!-- Certification 2 (CKA - EMBEDDED) -->
@@ -141,5 +141,52 @@
   <footer class="footer container">
     <p>&copy; 2025 Siorellana. All rights reserved.</p>
   </footer>
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.carousel__slide');
+    const slideCount = slides.length;
+    const visibleSlides = 3;
+  
+    function updateCarousel() {
+      const container = document.querySelector('.carousel__container');
+      const slideWidth = slides[0].offsetWidth;
+      container.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+  
+    function moveSlide(direction) {
+      const maxIndex = slideCount - visibleSlides;
+      currentIndex += direction;
+  
+      if (currentIndex < 0) currentIndex = maxIndex;
+      if (currentIndex > maxIndex) currentIndex = 0;
+  
+      updateCarousel();
+    }
+  
+    function autoSlide() {
+      moveSlide(1);
+    }
+  
+    let autoSlideInterval = setInterval(autoSlide, 4000); // Change every 4 seconds
+  
+    document.querySelector('.carousel__prev').addEventListener('click', () => {
+      moveSlide(-1);
+      resetInterval();
+    });
+  
+    document.querySelector('.carousel__next').addEventListener('click', () => {
+      moveSlide(1);
+      resetInterval();
+    });
+  
+    function resetInterval() {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(autoSlide, 4000);
+    }
+  
+    window.addEventListener('resize', updateCarousel);
+    window.addEventListener('load', updateCarousel);
+  </script>
+  
 </body>
 </html>
