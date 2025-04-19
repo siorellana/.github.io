@@ -6,84 +6,81 @@
   <title>Siorellana | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Siorellana</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button id="theme-toggle">🌓</button></li>
-      </ul>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">Siorellana</a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+        <div class="nav__toggle" id="nav-toggle">☰</div>
+      </div>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Hi, I'm Siorellana</h2>
-    <p>Technology enthusiast | Software Developer | Problem Solver</p>
-  </section>
+  <main class="main">
+    <section class="home section" id="home">
+      <div class="home__container container grid">
+        <div class="home__data">
+          <h1 class="home__title">Hi, I'm Siorellana</h1>
+          <h3 class="home__subtitle">Software Developer</h3>
+          <p class="home__description">Creating meaningful experiences with clean code and passion for design.</p>
+          <a href="#contact" class="button">Contact Me</a>
+        </div>
+      </div>
+    </section>
 
-  <section id="about" class="glass">
-    <h2>About Me</h2>
-    <p>I'm a passionate developer who loves building things that live on the internet. From developing software solutions to leading teams, I bring ideas to life with code and collaboration.</p>
-  </section>
+    <section class="about section" id="about">
+      <h2 class="section__title">About Me</h2>
+      <div class="about__container container grid">
+        <p class="about__description">I'm a passionate developer who loves building solutions that make an impact. From front-end interfaces to back-end logic, I'm always up for a challenge.</p>
+      </div>
+    </section>
 
-  <section id="skills" class="glass">
-    <h2>Skills</h2>
-    <ul class="skills-grid">
-      <li>JavaScript</li>
-      <li>TypeScript</li>
-      <li>React</li>
-      <li>Node.js</li>
-      <li>Git</li>
-      <li>Agile / Scrum</li>
-    </ul>
-  </section>
+    <section class="skills section" id="skills">
+      <h2 class="section__title">Skills</h2>
+      <div class="skills__container container grid">
+        <div class="skills__content">JavaScript</div>
+        <div class="skills__content">TypeScript</div>
+        <div class="skills__content">React</div>
+        <div class="skills__content">Node.js</div>
+        <div class="skills__content">Git</div>
+        <div class="skills__content">Agile / Scrum</div>
+      </div>
+    </section>
 
-  <section id="projects" class="glass">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>Project One</h3>
-      <p>Brief description of the project goes here.</p>
-      <a href="#">View Project</a>
-    </div>
-    <div class="project-card">
-      <h3>Project Two</h3>
-      <p>Brief description of another project.</p>
-      <a href="#">View Project</a>
-    </div>
-  </section>
+    <section class="projects section" id="projects">
+      <h2 class="section__title">Projects</h2>
+      <div class="projects__container container grid">
+        <div class="projects__card">
+          <h3 class="projects__title">Project One</h3>
+          <p class="projects__description">Brief description of the project goes here.</p>
+        </div>
+        <div class="projects__card">
+          <h3 class="projects__title">Project Two</h3>
+          <p class="projects__description">Brief description of another project.</p>
+        </div>
+      </div>
+    </section>
 
-  <section id="experience" class="glass">
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>Role at Company A</strong> – Jan 2022 - Present<br/>Short summary of your work and achievements.</li>
-      <li><strong>Role at Company B</strong> – 2020 - 2022<br/>Short summary of your work and achievements.</li>
-    </ul>
-  </section>
+    <section class="contact section" id="contact">
+      <h2 class="section__title">Contact</h2>
+      <div class="contact__container container grid">
+        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/siorellana/">/siorellana</a></p>
+      </div>
+    </section>
+  </main>
 
-  <section id="education" class="glass">
-    <h2>Education</h2>
-    <p><strong>Your University</strong> – Degree & Year</p>
-  </section>
-
-  <section id="contact" class="glass">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/siorellana/">/siorellana</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Siorellana. Built with ❤️ and GitHub Pages.</p>
+  <footer class="footer">
+    <p class="footer__copy">&copy; 2025 Siorellana. Built with ❤️</p>
   </footer>
 </body>
 </html>
