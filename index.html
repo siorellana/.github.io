@@ -78,24 +78,25 @@
     <h2 class="section__title">My Certifications</h2>
     <div class="carousel">
       <button class="carousel__prev" onclick="moveSlide(-1)">&#10094;</button>
-      
+  
       <div class="carousel__container">
+        
         <!-- Certification 1 -->
         <div class="carousel__slide">
           <a href="https://www.credly.com/badges/4f1fbef7-d85f-442d-973d-6fb222b201b4/public_url" target="_blank">
-            <img src="https://www.credly.com/badges/4f1fbef7-d85f-442d-973d-6fb222b201b4/public_url" alt="GitHub Administration">
-            <p>Certification 1</p>
+            <img src="https://images.credly.com/size/340x340/images/1a1c88de-6503-4a59-b942-9a6d94c7d5f0/github-admin.png" alt="GitHub Administration">
+            <p>GitHub Administration</p>
           </a>
         </div>
-        
-        <!-- Certification 2 -->
+  
+        <!-- Certification 2 (CKA - EMBEDDED) -->
         <div class="carousel__slide">
-          <a href="https://www.credly.com/badges/a4d73c93-d621-49e5-9afc-b152569c32f0/public_url" target="_blank">
-            <img src="https://www.credly.com/badges/a4d73c93-d621-49e5-9afc-b152569c32f0/public_url" alt="CKA: Certified Kubernetes Administrator">
-            <p>Certification 2</p>
-          </a>
+          <div data-iframe-width="150" data-iframe-height="270"
+               data-share-badge-id="a4d73c93-d621-49e5-9afc-b152569c32f0"
+               data-share-badge-host="https://www.credly.com"></div>
+          <p>CKA: Certified Kubernetes Administrator</p>
         </div>
-        
+  
         <!-- Certification 3 -->
         <div class="carousel__slide">
           <a href="https://link-to-certification-3.com" target="_blank">
@@ -103,13 +104,15 @@
             <p>Certification 3</p>
           </a>
         </div>
-        
-        <!-- Add more certifications as needed -->
+  
       </div>
-      
+  
       <button class="carousel__next" onclick="moveSlide(1)">&#10095;</button>
     </div>
   </section>
+  
+  <!-- ⚠️ This script should be added ONCE at the bottom of your HTML, before </body> -->
+  <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>  
   
   <section class="projects container" id="projects">
     <h2 class="section__title">Projects</h2>

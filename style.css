@@ -188,6 +188,7 @@ img {
   color: #444;
 }
 
+/* Certifications Section */
 .certifications {
   margin-top: 50px;
   text-align: center;
@@ -212,6 +213,8 @@ img {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  padding: 1rem;
+  min-height: 300px;
 }
 
 .carousel__slide img {
@@ -221,15 +224,22 @@ img {
   border-radius: 8px;
 }
 
+.carousel__slide iframe {
+  max-width: 100%;
+  border: none;
+  margin: 0 auto;
+}
+
 .carousel__slide p {
   margin-top: 10px;
   font-size: 1rem;
+  color: #333;
 }
 
 .carousel__prev,
 .carousel__next {
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
   font-size: 2rem;
   background-color: rgba(0, 0, 0, 0.5);
