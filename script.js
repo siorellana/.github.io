@@ -34,3 +34,15 @@ form.addEventListener('submit', (e) => {
     alert("Please fill out all fields.");
   }
 });
+
+let currentIndex = 0;
+
+function moveSlide(step) {
+  const slides = document.querySelectorAll('.carousel__slide');
+  const totalSlides = slides.length;
+  
+  currentIndex = (currentIndex + step + totalSlides) % totalSlides;
+  const container = document.querySelector('.carousel__container');
+  
+  container.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
