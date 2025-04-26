@@ -267,18 +267,42 @@ img {
   }
 }
 
-/* Projects */
-.projects__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+/* Companies Carousel Section */
+.companies {
+  margin-top: 4rem;
 }
 
-.project__card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.carousel__track {
+  display: flex;
+  width: calc(150px * 10); /* Adjust depending on the number of images */
+  animation: scroll 30s linear infinite;
+}
+
+.carousel__track {
+  align-items: center;
+}
+
+.carousel__track img {
+  width: 150px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 2rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Contact */
