@@ -347,3 +347,56 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+.contact__card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: #1d1d1d;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact__image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #0077b5; /* LinkedIn Blue */
+}
+
+.contact__info {
+  flex: 1;
+}
+
+.contact__info h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.contact__info p {
+  margin: 0.5rem 0 1.5rem;
+  color: #cccccc;
+  font-size: 1rem;
+}
+
+.contact__info .btn--primary {
+  display: inline-flex;
+  align-items: center;
+  background-color: #0077b5;
+  border: none;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  transition: background 0.3s ease;
+}
+
+.contact__info .btn--primary:hover {
+  background-color: #005983;
+}
